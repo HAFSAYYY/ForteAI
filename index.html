@@ -1,7 +1,128 @@
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="ForteAI"
-  agent-id="fa2d732e-85f6-4266-9533-0ead22658646"
-  language-code="en"
-></df-messenger>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FortēAI – Smart Chatbot for Students</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #4CAF50, #2E7D32);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 32px;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    header p {
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 5px;
+      color: #d4edda;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .logo {
+      width: 200px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .feature-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .feature-box:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .feature-box h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    FortēAI – Smart Chatbot for Students
+    <p>Your intelligent academic assistant</p>
+  </header>
+
+  <main>
+    <img class="logo" src="https://via.placeholder.com/200x150.png?text=Fort%C4%93AI+Logo" alt="FortēAI Logo">
+    <p>
+      FortēAI is your personal student assistant, ready to answer academic queries, provide important college info, and keep you motivated.
+      Click the chat icon at the bottom right to begin chatting.
+    </p>
+
+    <div class="features">
+      <div class="feature-box">
+        <h3>📚 Student FAQs</h3>
+        <p>Get quick answers to admissions, faculty, and event-related questions.</p>
+      </div>
+      <div class="feature-box">
+        <h3>💬 Motivation</h3>
+        <p>Receive daily motivational quotes and study tips to stay on track.</p>
+      </div>
+      <div class="feature-box">
+        <h3>⏰ Daily Reminders</h3>
+        <p>Stay updated with important dates, deadlines, and class schedules.</p>
+      </div>
+      <div class="feature-box">
+        <h3>📅 Academic Calendar</h3>
+        <p>Access key academic events and holidays in one place.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dialogflow Messenger -->
+  <df-messenger
+    agent-id="fa2d732e-85f6-4266-9533-0ead22658646"
+    chat-title="FortēAI"
+    language-code="en">
+  </df-messenger>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+  <footer>
+    FortēAI – Developed by Hafsa Usman and Team
+  </footer>
+
+</body>
+</html>
